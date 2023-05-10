@@ -24,11 +24,16 @@ public class Roles {
     private String roleName ;
 
 
+    @OneToMany(mappedBy="role",cascade = CascadeType.ALL)
+    private Set<Actions> actions;
 
 
 
 
-        }
+
+
+
+}
 
 
 

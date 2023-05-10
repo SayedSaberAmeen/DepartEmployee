@@ -25,6 +25,9 @@ public class Actions {
     private String codAction;
 
 
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Roles role;
 
 
 
