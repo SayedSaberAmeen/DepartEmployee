@@ -1,11 +1,11 @@
-package com.testProject.demo.dto.responseDto;
+package com.testProject.demo.dto.requestDto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class RoleResponseDto {
+public class RolesRequestDto {
 
 
     private int Role_id;

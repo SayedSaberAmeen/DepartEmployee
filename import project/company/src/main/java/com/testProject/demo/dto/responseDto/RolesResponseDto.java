@@ -1,12 +1,11 @@
-package com.testProject.demo.dto.requestDto;
+package com.testProject.demo.dto.responseDto;
 
-import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class RoleRequestDto {
+public class RolesResponseDto {
 
 
     private int Role_id;
