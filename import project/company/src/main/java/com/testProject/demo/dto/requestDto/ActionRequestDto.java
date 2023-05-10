@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class ActionRequestDto {
 
     private String name_action;
-     private String dataAction;
-     private String codAction;
+     private String data_Action;
+     private String code_Action;
 
 }

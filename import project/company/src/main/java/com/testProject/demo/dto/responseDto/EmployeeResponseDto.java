@@ -20,22 +20,6 @@ public class EmployeeResponseDto {
     String depart;
 
 
-    public EmployeeResponseDto(EmployeeResponseDto employeeResponseDto, DepartmentResponseDto departmentResponseDto) {
-
-
-        employee = "EmployeeResponseDto{" +
-                "name='" + employeeResponseDto.name + '\'' +
-                ", phoneNumber='" + employeeResponseDto.phoneNumber + '\'' +
-                ", cardNumber='" + employeeResponseDto.cardNumber + '\'' +
-                ", address='" + employeeResponseDto.address + '\'' +
-                ", barthDay='" + employeeResponseDto.barthDay + '\'' +
-                '}';
-        depart = "DepartmentResponseDto{" +
-                "departName='" + departmentResponseDto.getDepartName() + '\'' +
-                ", description='" + departmentResponseDto.getDescription() + '\'' +
-                '}';
-
-    }
 
 }
 

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 public class RolesResponseDto {
 
 
-    private int Role_id;
+    private int role_id;
     private String roleName;
 
 

@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 public class RolesRequestDto {
 
 
-    private int Role_id;
     private String roleName;
 
 

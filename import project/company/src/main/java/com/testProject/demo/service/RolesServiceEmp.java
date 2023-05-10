@@ -1,8 +1,7 @@
 package com.testProject.demo.service;
-import com.testProject.demo.common.entity.Roles;
+import com.testProject.demo.common.entity.Role;
 import com.testProject.demo.dto.requestDto.RolesRequestDto;
 import com.testProject.demo.dto.responseDto.RolesResponseDto;
-import com.testProject.demo.repository.RolesRepository;
 import com.testProject.demo.repository.RolesRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +24,7 @@ public class RolesServiceEmp implements RolesService{
     public RolesResponseDto addRole(RolesRequestDto RolesRequestDto) {
 
 
-        Roles Roles = mapperDep.map(RolesRequestDto, Roles.class);
+        Role Roles = mapperDep.map(RolesRequestDto, Role.class);
 
         rolesRepository.save(Roles);
 
@@ -36,7 +35,7 @@ public class RolesServiceEmp implements RolesService{
     @Override
     public RolesResponseDto getRoleByID(int id) {
 
-        Roles Roles = rolesRepository.findById(id).get();
+        Role Roles = rolesRepository.findById(id).get();
 
         return mapperDep.map(Roles, RolesResponseDto.class);
 
@@ -45,7 +44,7 @@ public class RolesServiceEmp implements RolesService{
     @Override
     public List<RolesResponseDto> getAllRole() {
 
-        List<Roles> Roless = rolesRepository.findAll();
+        List<Role> Roless = rolesRepository.findAll();
         List<RolesResponseDto> dtos = Roless
                 .stream()
                 .map(Roles -> mapperDep.map(Roles, RolesResponseDto.class))
@@ -57,7 +56,7 @@ public class RolesServiceEmp implements RolesService{
     @Override
     public RolesResponseDto updateRole(RolesRequestDto RolesRequestDto, int id) {
 
-        Optional<Roles> gitRoles = rolesRepository.findById(id);
+        Optional<Role> gitRoles = rolesRepository.findById(id);
 
         if (gitRoles.isEmpty()) {
 

@@ -5,6 +5,7 @@ import com.testProject.demo.common.entity.Employee;
 import com.testProject.demo.dto.requestDto.EmployeeRequestDto;
 import com.testProject.demo.dto.responseDto.DepartmentResponseDto;
 import com.testProject.demo.dto.responseDto.EmployeeResponseDto;
+import com.testProject.demo.dto.responseDto.ResponseDeportAndEmployee;
 import com.testProject.demo.repository.DepartmentRepository;
 import com.testProject.demo.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +34,7 @@ public class EmployeeServiceEmp implements EmployeeService {
 
 
     @Override
-    public EmployeeResponseDto addEmployee(EmployeeRequestDto employeeRequestDto, int depart_id) {
+    public ResponseDeportAndEmployee addEmployee(EmployeeRequestDto employeeRequestDto, int depart_id) {
 
         Long start1 = start;
 
@@ -57,7 +58,7 @@ public class EmployeeServiceEmp implements EmployeeService {
 
         log.info(endMessage, methodName, end - start);
 
-        return new EmployeeResponseDto(employeeResponseDto, departmentResponseDto);
+        return new ResponseDeportAndEmployee(departmentResponseDto, employeeResponseDto);
 
 
     }
