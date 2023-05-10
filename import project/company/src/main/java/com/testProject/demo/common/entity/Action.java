@@ -6,11 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "employee")
+@Table(name = "action")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Actions {
+public class Action {
 
 
 
@@ -20,14 +20,16 @@ public class Actions {
     private int ac_id;
     private String name_action;
     @Column(name = "date_action")
-    private String dataAction;
+    private String data_Action;
     @Column(name = "cod_action")
-    private String codAction;
+    private String code_Action;
+
+
 
 
     @ManyToOne
     @JoinColumn(name = "role_id")
-    private Roles role;
+    private Role role;
 
 
 

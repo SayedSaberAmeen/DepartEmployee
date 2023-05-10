@@ -2,6 +2,7 @@ package com.testProject.demo.controller;
 
 import com.testProject.demo.dto.requestDto.EmployeeRequestDto;
 import com.testProject.demo.dto.responseDto.EmployeeResponseDto;
+import com.testProject.demo.dto.responseDto.ResponseDeportAndEmployee;
 import com.testProject.demo.service.EmployeeServiceEmp;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,8 @@ public class EmployeeController {
 
 
     @PostMapping("/saveEmp/{depart_id}")
-    public EmployeeResponseDto addEmployee(@RequestBody EmployeeRequestDto employeeRequestDto,
-                                           @PathVariable(name = "depart_id") int depart_id) {
+    public ResponseDeportAndEmployee addEmployee(@RequestBody EmployeeRequestDto employeeRequestDto,
+                                                 @PathVariable(name = "depart_id") int depart_id) {
         return employeeServiceEmp.addEmployee(employeeRequestDto, depart_id);
     }
 

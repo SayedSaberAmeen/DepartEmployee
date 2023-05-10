@@ -12,19 +12,19 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Roles {
+public class Role {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "role_id")
-    private int Role_id  ;
+    private int role_id  ;
     @Column(name = "role_name")
     private String roleName ;
 
 
     @OneToMany(mappedBy="role",cascade = CascadeType.ALL)
-    private Set<Actions> actions;
+    private Set<Action> actions;
 
 
 

@@ -12,12 +12,8 @@ public class ActionResponseDto {
 
 
     private String name_action;
-    private String dataAction;
-    private String codAction;
-
-
-    String action;
-    String role;
+    private String data_Action;
+    private String code_Action;
 
 
 
@@ -29,7 +25,19 @@ public class ActionResponseDto {
 
 
 
+    }
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
